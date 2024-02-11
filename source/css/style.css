@@ -950,9 +950,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 .img-name {
+  letter-spacing: 1px;
   display: grid;
   justify-content: center;
   align-content: center;
+  text-shadow: 2px 2px 1px #000000;
+  font-family: "ISOCPEUR";
+  font-size: 18px;
+  font-weight: 700;
   color: #a5a5a5;
   height: 40px;
   margin: 5px 0px 0px 5px;
@@ -961,13 +966,28 @@ html::-webkit-scrollbar-thumb {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5333333333);
 }
 
+.img-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
 .img-item a {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   margin: 0;
-  padding: 0;
+}
+
+.img-item:active {
+  transition: transform 0.1s;
+  transform: scale(0.95);
 }
 
 .img-item:hover {
-  opacity: 0.8;
+  box-shadow: 0px 0px 6px #ffffff;
 }
 
 .img-showcase {
@@ -1034,12 +1054,17 @@ html::-webkit-scrollbar-thumb {
   padding: 0;
 }
 
+.content__img.paints-img.img-select {
+  padding: 0;
+}
+
 .stickers-img {
+  padding-top: 5px;
+  padding-bottom: 5px;
   justify-content: space-evenly;
   align-content: center;
   background-color: #141414;
   margin: 5px;
-  padding: 0;
   display: grid;
   grid-auto-flow: column;
   border: 2px solid #000000;
@@ -1048,8 +1073,6 @@ html::-webkit-scrollbar-thumb {
 
 .stickers-img img {
   max-width: 83px;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .content__info {
@@ -1282,6 +1305,15 @@ html::-webkit-scrollbar-thumb {
 
 /* Режим Планшет 2 бара */
 @media (max-width: 1550px) {
+  .stickers-img img {
+    max-width: 50px;
+  }
+  .paints-img img {
+    max-width: 68px;
+  }
+  .img-display {
+    width: 414px;
+  }
   .main {
     padding-top: 85px;
   }
@@ -1318,6 +1350,9 @@ html::-webkit-scrollbar-thumb {
 }
 /* Режим Планшет 1 бар */
 @media (max-width: 1004px) {
+  .img-name {
+    font-size: 16px;
+  }
   .content__description p {
     font-size: 16px;
     line-height: 18px;
@@ -1342,6 +1377,17 @@ html::-webkit-scrollbar-thumb {
 }
 /* Режим смартфон */
 @media (max-width: 812px) {
+  .stickers-img img {
+    max-width: none;
+    width: 90%;
+  }
+  .paints-img img {
+    max-width: none;
+    width: 90%;
+  }
+  .img-display {
+    width: auto;
+  }
   .sidebar__left, .sidebar__right {
     display: none;
   }
@@ -1354,6 +1400,9 @@ html::-webkit-scrollbar-thumb {
   .content__description p {
     font-size: 14px;
     line-height: 16px;
+  }
+  .img-name {
+    font-size: 14px;
   }
   .info__icon {
     padding-top: 2px;
@@ -1384,6 +1433,15 @@ html::-webkit-scrollbar-thumb {
 }
 /* Режим микро-смартфон */
 @media (max-width: 410px) {
+  .zoom-img {
+    padding: 5px;
+  }
+  .zoom {
+    padding: 5px;
+  }
+  .img-name {
+    height: 25px;
+  }
   .content__source a {
     max-width: 280px;
     min-width: 100%;
