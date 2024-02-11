@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Jura-VariableFont_wght';
+  src: url(./Jura-VariableFont_wght.eot);
+  src: url(./Jura-VariableFont_wght.eot?#iefix) format('embedded-opentype'),
+       url(./Jura-VariableFont_wght.woff2) format('woff2'),
+       url(./Jura-VariableFont_wght.woff) format('woff'),
+       url(./Jura-VariableFont_wght.ttf) format('truetype'),
+       url(./Jura-VariableFont_wght.svg#Jura-VariableFont_wght) format('svg'),
+       url(./Jura-VariableFont_wght.otf) format('otf');
+}
