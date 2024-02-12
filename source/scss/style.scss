@@ -292,7 +292,7 @@ html::-webkit-scrollbar-thumb {
 .content__img.brand-crafts {
    display: grid;
    grid-auto-flow:column;
-   grid-template-columns: auto 78.5%;
+   grid-template-columns: auto 75.9%;
    padding-top: 0px;}
 .content__img.brand-crafts div {
    background-color: #141414;
@@ -300,13 +300,14 @@ html::-webkit-scrollbar-thumb {
    padding: 0px 5px 0px 5px;
    border: 2px solid #000000;
    box-shadow: 0px 0px 4px #00000088;}
+.type-crafts {
+   position: relative;}
 .type-crafts img {
-   background-image: radial-gradient(#0000007c 40%, #22222200, #22222200);
-   border: none;
-   box-shadow: none;
-   transition: transform .4s;}
-.type-crafts img:hover {
-   transform: scale(2);}
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   border: 2px solid #000000;
+   box-shadow: 0px 0px 4px #00000088;}
 
 .img-name {
    letter-spacing: 1px;
