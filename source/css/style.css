@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
+  transition: all 0.2s;
   grid-area: header;
   position: fixed;
   width: 100%;
@@ -375,7 +376,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer {
   grid-area: footer;
-  margin-top: 30px;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-around;
@@ -693,6 +693,55 @@ html::-webkit-scrollbar-thumb {
   position: sticky;
   top: 105px;
   margin-left: 10px;
+}
+
+.pagination {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+}
+
+.pagination > i {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: #393939;
+  font-size: 30px;
+  text-shadow: none;
+  transition: transform 0.2s;
+}
+
+.pagination > a {
+  transition: all 200ms;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 40px;
+  width: 40px;
+  text-shadow: 2px 2px 1px #000000;
+  font-size: 28px;
+  line-height: 16px;
+  font-family: "ISOCPEUR";
+  font-weight: 600;
+  color: #a5a5a5;
+  padding: 5px;
+  margin: 30px 5px 30px 5px;
+  background-color: #222222;
+  border: 2px solid #393939;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5333333333);
+}
+
+.pagination > a:hover {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4862745098);
+  color: #ffffff;
+}
+
+.pagination > a:active {
+  text-shadow: 0px 0px 10px rgba(249, 141, 0, 0.4941176471);
+  color: #F98C00;
 }
 
 .content__source {
@@ -1305,6 +1354,12 @@ html::-webkit-scrollbar-thumb {
 
 /* Режим Планшет 2 бара */
 @media (max-width: 1550px) {
+  .pagination > a {
+    margin: 25px 5px 25px 5px;
+    height: 35px;
+    width: 35px;
+    font-size: 22px;
+  }
   .stickers-img img {
     max-width: 50px;
   }
@@ -1433,6 +1488,11 @@ html::-webkit-scrollbar-thumb {
 }
 /* Режим микро-смартфон */
 @media (max-width: 410px) {
+  .pagination > a {
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+  }
   .zoom-img {
     padding: 5px;
   }
@@ -1460,4 +1520,17 @@ html::-webkit-scrollbar-thumb {
 }
 .section {
   height: 15px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Пагинацию стилизовал и адаптировал, вернёмся к ней, когда начнём делить контент на страницы */
+/* Перегородки если и делать, то точно не через Border */
+/* Скрывающийся Header - огонь, но надо отключить на смартфонах */
+/* Имя крафта при увеличении изображения - не заработал, включи в следующий раз */
+/*.craft__title {
+   position: absolute;
+   z-index: 100000;
+   color: #fff;
+   font-size: 80px;
+   top: 95%;
+   left: 50%;
+   transform: translate(-50%, -50%);}*//*# sourceMappingURL=style.css.map */
