@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
    document.getElementById("burger").addEventListener("click", function() {
       document.querySelector("header").classList.toggle("open")})})
+
+
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll(".lock-padding");
@@ -74,6 +76,7 @@ document.addEventListener('keydown', function (e) {
 			Element.prototype.mozMatchesSelector ||
 			Element.prototype.msMatchesSelector;}})();
 
+
 const imgs = document.querySelectorAll('.img-select a');
 const imgBtns = [...imgs];
 let imgId = 1;
@@ -86,3 +89,12 @@ function slideImage(){
       const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
     document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;}
 window.addEventListener('resize', slideImage);
+
+/* Чётко, но на телефонах надо выключить эту фичу */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+   var currentScrollPos = window.pageYOffset;
+   if (prevScrollpos > currentScrollPos) {
+   document.getElementById("header").style.top = "0";} else {
+      document.getElementById("header").style.top = "-83px";}
+   prevScrollpos = currentScrollPos;}

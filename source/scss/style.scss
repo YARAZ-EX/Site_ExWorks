@@ -85,6 +85,45 @@ html::-webkit-scrollbar-thumb {
    position: sticky;
    top: 105px;
    margin-left: 10px;}
+.pagination {
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   grid-auto-flow:column;}
+.pagination > i {
+   position: relative;
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   color: #393939;
+   font-size: 30px;
+   text-shadow: none;
+   transition: transform .2s;}
+.pagination > a {
+   transition: all 200ms;
+   position: relative;
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   height: 40px;
+   width: 40px;
+   text-shadow: 2px 2px 1px #000000;
+   font-size: 28px;
+   line-height: 16px;
+   font-family: "ISOCPEUR";
+   font-weight: 600;
+   color: #a5a5a5;
+   padding: 5px;
+   margin: 30px 5px 30px 5px;
+   background-color: #222222;
+   border: 2px solid #393939;
+   box-shadow: 0px 0px 4px #00000088;}
+.pagination > a:hover {
+   text-shadow: 0px 0px 10px #ffffff7c;
+   color: #ffffff;}
+.pagination > a:active {
+   text-shadow: 0px 0px 10px #f98d007e;
+   color: #F98C00;}
 
 
 .content__source {
@@ -253,7 +292,7 @@ html::-webkit-scrollbar-thumb {
 .content__img.brand-crafts {
    display: grid;
    grid-auto-flow:column;
-   grid-template-columns: auto 78.5%;
+   grid-template-columns: auto 75.9%;
    padding-top: 0px;}
 .content__img.brand-crafts div {
    background-color: #141414;
@@ -261,13 +300,14 @@ html::-webkit-scrollbar-thumb {
    padding: 0px 5px 0px 5px;
    border: 2px solid #000000;
    box-shadow: 0px 0px 4px #00000088;}
+.type-crafts {
+   position: relative;}
 .type-crafts img {
-   background-image: radial-gradient(#0000007c 40%, #22222200, #22222200);
-   border: none;
-   box-shadow: none;
-   transition: transform .4s;}
-.type-crafts img:hover {
-   transform: scale(2);}
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   border: 2px solid #000000;
+   box-shadow: 0px 0px 4px #00000088;}
 
 .img-name {
    letter-spacing: 1px;
@@ -460,6 +500,11 @@ html::-webkit-scrollbar-thumb {
 
 /* Режим Планшет 2 бара */
 @media (max-width: 1550px) {
+   .pagination > a {
+      margin: 25px 5px 25px 5px;
+      height: 35px;
+      width: 35px;
+      font-size: 22px;}
    .stickers-img img {
       max-width: 50px;}
    .paints-img img {
@@ -551,6 +596,10 @@ html::-webkit-scrollbar-thumb {
       padding: 5px;}}
 /* Режим микро-смартфон */
 @media (max-width: 410px) {
+   .pagination > a {
+      height: 30px;
+      width: 30px;
+      font-size: 18px;}
    .zoom-img {
       padding: 5px;}
    .zoom {
@@ -571,3 +620,20 @@ html::-webkit-scrollbar-thumb {
 
 .section {
    height: 15px;}
+
+/* Пагинацию стилизовал и адаптировал, вернёмся к ней, когда начнём делить контент на страницы */
+
+/* Перегородки если и делать, то точно не через Border */
+
+/* Скрывающийся Header - огонь, но надо отключить на смартфонах */
+
+/* Имя крафта при увеличении изображения - не заработал, включи в следующий раз */
+
+/*.craft__title {
+   position: absolute;
+   z-index: 100000;
+   color: #fff;
+   font-size: 80px;
+   top: 95%;
+   left: 50%;
+   transform: translate(-50%, -50%);}*/
