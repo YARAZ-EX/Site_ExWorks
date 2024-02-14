@@ -1,8 +1,9 @@
+/* Меню бургер */
 document.addEventListener("DOMContentLoaded", function() {
    document.getElementById("burger").addEventListener("click", function() {
       document.querySelector("header").classList.toggle("open")})})
 
-
+/* Фича с увеличением изображений */
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll(".lock-padding");
@@ -76,7 +77,7 @@ document.addEventListener('keydown', function (e) {
 			Element.prototype.mozMatchesSelector ||
 			Element.prototype.msMatchesSelector;}})();
 
-
+/* Фича с галереей для шаблона №8 */
 const imgs = document.querySelectorAll('.img-select a');
 const imgBtns = [...imgs];
 let imgId = 1;
@@ -90,7 +91,7 @@ function slideImage(){
     document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;}
 window.addEventListener('resize', slideImage);
 
-/* Чётко, но на телефонах надо выключить эту фичу */
+/* Фича со скрытием Шапки при скролле вниз (Требует доработки - на телефонах не должна скрываться)*/
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
    var currentScrollPos = window.pageYOffset;
