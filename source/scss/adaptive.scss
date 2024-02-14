@@ -1,0 +1,121 @@
+@media (max-width: 1550px) { /* Режим Планшет 2 бара */
+   .pagination > a {
+      margin: 25px 5px 25px 5px;
+      height: 35px;
+      width: 35px;
+      font-size: 22px;}
+   .stickers-img img {
+      max-width: 50px;}
+   .paints-img img {
+      max-width: 68px;}
+   .img-display {
+      width: 414px;}
+   .main {
+      padding-top: 85px;}
+   .main__block {
+      flex: 0 0 561px;}
+   .sidebar__left {
+      top: 85px;
+      flex: 0 0 200px;
+      margin-right: 10px;}
+   .sidebar__right {
+      top: 85px;
+      flex: 0 0 200px;
+      margin-left: 10px;}
+   .info__icon {
+      margin-left: 2px;
+      margin-right: 2px;}
+   .icon-marker {
+      font-size: 16px;}
+   .marker__location {
+      max-width: 230px;
+      right: -42.2%;}
+   .content__fraction-paints img {
+      max-height: 100px;}
+   .content__fraction-stickers img {
+      max-height: 100px;}}
+
+
+@media (max-width: 1004px) { /* Режим Планшет 1 бар */
+   .img-name {
+      font-size: 16px;}
+   .content__description p {
+      font-size: 16px;
+      line-height: 18px;}
+   .main {
+      padding-top: 85px;}
+   .sidebar__left {
+      flex: 0 0 200px;
+      margin-right: 10px;
+      top: 85px;}
+   .sidebar__right {
+      display: none;}}
+@media (max-width: 650px) {
+   .icon-marker {
+      font-size: 14px;
+      text-shadow: 1px 1px 1px #000000;}}
+
+
+@media (max-width: 812px) { /* Режим смартфон */
+   .stickers-img img {
+      max-width: none;
+      width: 90%;}
+   .paints-img img {
+      max-width: none;
+      width: 90%;}
+   .img-display {
+      width: auto;}
+   .sidebar__left,.sidebar__right {
+      display: none;}
+   .main {
+      padding-top: 85px;}
+   .main__block {
+      flex: 1 1 auto;}
+   .content__description p {
+      font-size: 14px;
+      line-height: 16px;}
+   .img-name {
+      font-size: 14px;}
+   .info__icon {
+      padding-top: 2px;
+      font-size: 8px;}
+   .content__info p {
+      font-size: 10px;
+      line-height: 12px;}
+   .content__source {
+      font-size: 10px;
+      line-height: 12px;}
+   .map__marker {
+      font-size: 8px;}
+   .marker__location {
+      right: -30.1%;
+      top: 2%;
+      max-width: 30%}
+   .content__fraction-paints img {
+      padding: 5px;}
+   .content__fraction-stickers img {
+      padding: 5px;}}
+
+
+@media (max-width: 410px) { /* Режим микро-смартфон */
+   .pagination > a {
+      height: 30px;
+      width: 30px;
+      font-size: 18px;}
+   .zoom-img {
+      padding: 5px;}
+   .zoom {
+      padding: 5px;}
+   .img-name {
+   height: 25px;}
+   .content__source a {
+      max-width: 280px;
+      min-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;}
+   .content__buttons button{
+      font-size: 11px;}
+   .icon-marker {
+      font-size: 10px;}
+   .content__fraction-stickers img {
+      padding: 0px;}}

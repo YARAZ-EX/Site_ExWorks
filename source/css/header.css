@@ -1,0 +1,303 @@
+@charset "UTF-8";
+.header {
+  transition: all 0.2s;
+  grid-area: header;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  padding: 10px;
+  background-color: #222222;
+}
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header__body {
+  z-index: 2;
+  display: flex;
+  width: 360px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__logo {
+  flex: 0 0 60px;
+  z-index: 3;
+}
+
+.header__logo img {
+  max-width: 100%;
+}
+
+.header__name {
+  line-height: 30px;
+  letter-spacing: -1px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.7725490196);
+  font-weight: 700;
+  font-family: "Jura";
+  font-size: 30px;
+  color: #fff;
+  margin: 0px 0px 4px 10px;
+}
+
+.header__menu {
+  max-height: 72px;
+  border: 2px solid #000000;
+  background-color: #141414;
+  z-index: 2;
+}
+
+.header__list {
+  width: 1100px;
+  display: flex;
+  grid-template: 1fr 1fr/1fr;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.header__list li {
+  z-index: 2;
+  margin: 10px 20px 10px 10px;
+}
+
+.header__link:hover {
+  text-shadow: 0px 0px 10px rgba(249, 141, 0, 0.4941176471);
+  color: #F98C00;
+}
+
+.header__link:active {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4862745098);
+  color: #ffffff;
+}
+
+.header__link:hover::before {
+  transform: scale(1);
+  transform: scaleX(1);
+  transition: transform 0.25s;
+}
+
+.header__link::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #F98C00;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+.header__link {
+  transition: all 200ms;
+  text-shadow: 2px 2px 1px #000000;
+  position: relative;
+  font-family: "Jura";
+  font-weight: 500;
+  color: #fff;
+  font-size: 18px;
+  line-height: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.header__burger {
+  width: 44px;
+  height: 40px;
+  border: 2px solid #000000;
+  background-color: #141414;
+  position: relative;
+  display: none;
+  z-index: 3;
+}
+
+.header__burger span {
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  background-color: #fff;
+  left: 8.2px;
+  z-index: 3;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+.block__background {
+  display: none;
+}
+
+.header__burger span:nth-child(1) {
+  transform: translateY(-9px);
+}
+
+.header__burger span:nth-child(2) {
+  transform: translateY(-1px);
+}
+
+.header__burger span:nth-child(3) {
+  transform: translateY(7px);
+}
+
+.header.open .header__burger span {
+  background-color: #F98C00;
+}
+
+.header.open .header__burger span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__burger span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+/* Режим Планшет */
+@media (max-width: 1550px) {
+  .header__body {
+    width: 250px;
+  }
+  .header__logo {
+    flex: 0 0 50px;
+  }
+  .header__name {
+    font-size: 20px;
+  }
+  .header__menu {
+    max-height: 52px;
+    min-width: 380px;
+    overflow: hidden;
+  }
+  .header__list {
+    width: 100%;
+    position: relative;
+    max-width: 780px;
+  }
+  .header__list li {
+    margin: 0px;
+    padding: 5px;
+  }
+  .header__link {
+    font-size: 14px;
+  }
+}
+/* Режим смартфон */
+@media (max-width: 812px) {
+  .header__link.one {
+    padding-right: 205px;
+  }
+  .header__link.two {
+    padding-right: 174px;
+  }
+  .header__link.three {
+    padding-right: 167px;
+  }
+  .header__link.four {
+    padding-right: 167px;
+  }
+  .header__link.five {
+    padding-right: 156px;
+  }
+  .header__link.six {
+    padding-right: 154px;
+  }
+  .header__link.seven {
+    padding-right: 151px;
+  }
+  .header__link.eight {
+    padding-right: 140px;
+  }
+  .header__link.nine {
+    padding-right: 100px;
+  }
+  .header__link.ten {
+    padding-right: 89px;
+  }
+  .header__link:hover::before {
+    transform-origin: left;
+  }
+  .header__link::before {
+    transform-origin: right;
+  }
+  .header__logo {
+    flex: 0 0 40px;
+  }
+  .header__name {
+    margin: 0px 0px 4px 5px;
+  }
+  .container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 8px 0px 8px;
+  }
+  .header__list {
+    display: inline;
+  }
+  .header__list li {
+    margin: 0px 0px 10px 0px;
+    display: block;
+    padding: 10px;
+    border: 2px solid #000000;
+    background-color: #141414;
+  }
+  .header__menu {
+    max-height: 494px;
+    min-width: 0px;
+    margin-top: 71px;
+    position: absolute;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    transition: transform 0.5s;
+    padding: 10px 10px 0px 10px;
+    background-color: #393939;
+  }
+  .header__burger {
+    display: block;
+    min-width: 44px;
+    min-height: 40px;
+  }
+  .header.open .header__menu {
+    transform: translateX(-100%);
+  }
+}
+/* Режим смартфон 10 строк*/
+@media (max-height: 660px) {
+  .header__list {
+    overflow: hidden;
+  }
+}
+.header__menu {
+  overflow: auto;
+}
+
+/*Режим смартфон 8 строк */
+@media (max-height: 650px) {
+  .header__menu {
+    height: 398px;
+  }
+}
+/* Режим смартфон 6 строк*/
+@media (max-height: 560px) {
+  .header__menu {
+    height: 302px;
+  }
+}
+/* Режим смартфон 4 строки*/
+@media (max-height: 460px) {
+  .header__menu {
+    height: 205px;
+  }
+}

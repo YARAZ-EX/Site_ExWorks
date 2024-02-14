@@ -1,0 +1,28 @@
+@import '../fonts/iconmoon/style.css';
+@font-face {
+   font-family: 'ISOCPEUR';
+   src: url(../fonts/ISOCPEUR/ISOCPEUR.eot);
+   src: url(../fonts/ISOCPEUR/ISOCPEUR.eot?#iefix) format('embedded-opentype'),
+   url(../fonts/ISOCPEUR/ISOCPEUR.woff2) format('woff2'),
+   url(../fonts/ISOCPEUR/ISOCPEUR.woff) format('woff'),
+   url(../fonts/ISOCPEUR/ISOCPEUR.ttf) format('truetype'),
+   url(../fonts/ISOCPEUR/ISOCPEUR.svg#ISOCPEUR) format('svg'),
+   url(../fonts/ISOCPEUR/ISOCPEUR.otf) format('otf');}
+@font-face {
+   font-family: 'Jura';
+   src: url(../fonts/Jura/Jura-VariableFont_wght.eot);
+   src: url(../fonts/Jura/Jura-VariableFont_wght.eot?#iefix) format('embedded-opentype'),
+   url(../fonts/Jura/Jura-VariableFont_wght.woff2) format('woff2'),
+   url(../fonts/Jura/Jura-VariableFont_wght.woff) format('woff'),
+   url(../fonts/Jura/Jura-VariableFont_wght.ttf) format('truetype'),
+   url(../fonts/Jura/Jura-VariableFont_wght.svg#Jura-VariableFont_wght) format('svg'),
+   url(../fonts/Jura/Jura-VariableFont_wght.otf) format('otf');}
+html::-webkit-scrollbar {
+   height: 10px;
+   width: 14px;}
+html::-webkit-scrollbar-track {
+   background: #222222;
+   border: 2px solid #000000;}
+html::-webkit-scrollbar-thumb {
+   background-color: #393939;
+   border: 2px solid #000000;}
